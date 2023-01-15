@@ -37,6 +37,6 @@ func (s *service) AverageDestination(ctx context.Context, dst string) (avg float
 		return 0, nil
 	}
 
-	result := (len(ticketsForDestination) / 100) * len(totaltickets)
+	result := (len(ticketsForDestination) * 100) / len(totaltickets)
 	return float32(result), nil
 }
